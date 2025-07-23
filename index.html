@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Masonry-Demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- Modal -->
+    <div
+      class="modal"
+      id="faqsModal"
+      tabindex="-1"
+      aria-labelledby="faqsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fs-51" id="faqsModalLabel">
+              Frequently Asked Questions
+            </h5>
+          </div>
+          <div class="modal-body">
+            <div class="accordion accordion-flush" id="accordionFaqs">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button bg-transparent text-body-emphasis"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    How to order the product?
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionFaqs"
+                >
+                  <div class="accordion-body">
+                    <strong>It's easy!</strong>
+                    You can contact us directly by sending an email and chatting
+                    via the WhatsApp application. Or you can also come directly
+                    to the office address.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed bg-transparent text-body-emphasis"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    What payment methods do you accept?
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFaqs"
+                >
+                  <div class="accordion-body">
+                    <strong>Very Simple.</strong>
+                    <ul class="list-unstyled">
+                      <li>
+                        Currently we only accept two types of payment :
+                        <ul>
+                          <li>Cash payments and</li>
+                          <li>Bank tranfer</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed bg-transparent text-body-emphasis"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    When is the delivery time?
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFaqs"
+                >
+                  <div class="accordion-body">
+                    <strong>As soon as possible!</strong> It We will immediately
+                    process your order and ship your goods on the same day if
+                    there are no obstacles in the transaction process.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed bg-transparent text-body-emphasis"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    Can damaged goods be returned?
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFaqs"
+                >
+                  <div class="accordion-body">
+                    <strong>Of course!</strong> We are responsible for damaged
+                    goods. Please contact us for the return process.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-dark rounded-0"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal"
+      id="bellModal"
+      tabindex="-1"
+      aria-labelledby="bellModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 class="modal-title" id="bellModalLabel">
+              Promotion - Batam Only
+            </h6>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="/img/Free Shipping.jpg" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="container sticky-top">
+      <nav class="navbar navbar-expand-lg bg-body border-bottom">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-2 link-body-emphasis" href="#">Tumitra</a>
+          <ul class="nav">
+            <li class="nav-item">
+              <a
+                class="nav-link link-body-emphasis"
+                aria-current="page"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#faqsModal"
+                >FAQs</a
+              >
+            </li>
+            <div class="vr"></div>
+            <li class="nav-item">
+              <a
+                class="nav-link link-body-emphasis"
+                data-bs-toggle="modal"
+                data-bs-target="#bellModal"
+                href="#"
+                ><i class="bi bi-bell-fill"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="container my-4">
+      <div class="hero py-2">
+        <div class="row flex-lg-row-reverse align-items-center g-lg-5">
+          <div class="col-lg-6 mb-4">
+            <img src="/img/8.jpg" class="img-fluid" loading="lazy" alt="" />
+          </div>
+          <div class="col-lg-6 text-sm-center text-lg-start mb-4">
+            <h1 class="display-4 fw-bold text-body-emphasis lh-1 mb-4 ms-3">
+              Office Supplies Solution.
+            </h1>
+            <p class="lead ms-3 text-muted mb-4">
+              Customize the stationery you need, and We'll help you get office
+              supplies for you workplace. Have great workday!
+            </p>
+            <div class="features ms-2 mb-41 text-start">
+              <div class="row row-cols-1 row-cols-sm-2">
+                <div
+                  class="col d-flex align-items-start justify-content-lg-start justify-content-sm-center"
+                >
+                  <i
+                    class="bi bi-star-fill flex-shrink-0 mx-3 fs-4 text-warning text-opacity-75"
+                  ></i>
+                  <div>
+                    <h5 class="text-body-emphasis my-1">Average Rating</h5>
+                    <p class="small lh-sm text-muted">4.9/5 Reviews</p>
+                  </div>
+                </div>
+                <div
+                  class="col d-flex align-items-start justify-content-lg-start justify-content-sm-center"
+                >
+                  <i
+                    class="bi bi-shield-fill-check flex-shrink-0 mx-3 fs-4 text-success text-opacity-75"
+                  ></i>
+                  <div>
+                    <h5 class="text-body-emphasis my-1">Our Guarantee</h5>
+                    <p class="small lh-sm text-muted">100% Money Back</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" data-masonry='{"percentPosition": true }'>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card border-0">
+            <img
+              src="/img/5.jpg"
+              class="card-img-top rounded-0"
+              height="520"
+              width="100%"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title">Stationery</h5>
+              <p class="card-text">
+                1 - This is a longer card with supporting text below as a
+                natural lead-in to additional content. This content is a little
+                bit longer.
+              </p>
+              <p class="card-text">
+                <small class="text-body-secondary"
+                  >Last updated 28 mins ago</small
+                >
+              </p>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card border-0">
+            <div class="card-body">
+              <h5 class="card-title">About Us</h5>
+              <p class="card-text">
+                We are a general supplier and printing company. We provide all
+                your office equipment & Make everything better with our
+                products.
+              </p>
+              <div class="text-end">
+                <a
+                  href="https://api.whatsapp.com/send?phone=+62811693570&text=Hai!%20Tumitra.."
+                  class="btn btn-dark btn-sm rounded-0"
+                  target="_blank"
+                  >Contact Us</a
+                >
+                <a
+                  href="mailto:tumitra.tps@gmail.com"
+                  class="btn btn-dark btn-sm rounded-0 ms-3"
+                  target="_blank"
+                  >Send Email</a
+                >
+              </div>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card border-0">
+            <img
+              src="/img/6.jpg"
+              class="card-img-top rounded-0"
+              height="240"
+              width="100%"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title">Copy Paper</h5>
+              <p class="card-text">
+                This card has supporting text below as a natural lead-in to
+                additional content.
+              </p>
+              <p class="card-text">
+                <small class="text-body-secondary"
+                  >Last updated 3 mins ago</small
+                >
+              </p>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card border-0">
+            <div
+              id="carouselExampleSlidesOnly"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="/img/3.jpg" class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="/img/3.jpg" class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="/img/3.jpg" class="d-block w-100" alt="..." />
+                </div>
+              </div>
+            </div>
+            <div class="card-body border-bottom">
+              <h5 class="card-title">Our Products</h5>
+              <p class="card-text">
+                The products we offer are produced domestically and have
+                national certification and standardization.
+              </p>
+            </div>
+            <ol class="list-group list-group-numbered list-group-flush">
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Stationery</div>
+                  <p class="text-muted">Writing &amp; Photocopy Paper</p>
+                </div>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Printing</div>
+                  <p class="text-muted">Form &amp; Invoice</p>
+                </div>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Household Appliances</div>
+                  <p class="text-muted">Cleaning Tool &amp; Air Freshener</p>
+                </div>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Electrical</div>
+                  <p class="text-muted">Lights &amp; Switches</p>
+                </div>
+                <span class="badge text-bg-dark rounded-pill mt-1 me-auto"
+                  >New</span
+                >
+              </li>
+            </ol>
+          </div>
+          <hr class="d-sm-none" />
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card">
+            <img
+              src="/img/1.jpg"
+              class="card-img rounded-0"
+              height="260"
+              width="100%"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card p-3 border-0">
+            <figure class="mb-0">
+              <blockquote class="blockquote">
+                <p class="fs-3 lh-1 mb-4">
+                  "We are very satisfied with all the service."
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                Kenzie Anaki
+                <cite title="Source Title">- Owner of Kenzhop Clothing</cite>
+              </figcaption>
+              <img src="/img/verified.png" class="float-end" alt="" />
+            </figure>
+          </div>
+          <hr class="d-lg-none" />
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card border-0">
+            <div class="card-body">
+              <h5 class="card-title">Office Address</h5>
+              <p class="card-text text-muted small">
+                Baloi Indah, Jl. Gn. Merbabu No.03 / 117 <br />Kota Batam 29443
+                - Indonesia <br />Monday - Saturday ( 08 - 17 PM )
+              </p>
+              <div class="text-lg-end">
+                <a href="#" class="btn btn-dark btn-sm rounded-0"
+                  >Our Location</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="container my-4">
+      <div
+        class="d-flex flex-column flex-sm-row justify-content-between border-top py-3"
+      >
+        <p class="mb-0 mx-3">© 2025 Tumitra, Cv. All rights reserved.</p>
+        <a
+          class="link-offset-2 link-body-emphasis link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover mx-3"
+          href="#"
+        >
+          WhatsApp
+        </a>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+      integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+      crossorigin="anonymous"
+      class="astro-vvvwv3sm"
+    ></script>
+  </body>
+</html>
